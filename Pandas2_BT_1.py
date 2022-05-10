@@ -10,7 +10,9 @@ print("Kiểu dữ liệu của cột GDP (millions of US$):",df["GDP (millions 
 #YC2: Tính giá trị lớn nhất và giá trị nhỏ nhất của GDP
 print("Giá trị lớn nhất của GDP là:",df["GDP (millions of US$)"].max())
 
-#YC3: Hãy cho biết xu hướng phân bố dữ liệu của GDP.
+# #YC3: Hãy cho biết xu hướng phân bố dữ liệu của GDP.
+print(df.describe())
+
 
 # YC4: Hãy cho biết châu lục nàu xuất nhiện nhiều nhất
 target = df.groupby(by="Continent").count()
