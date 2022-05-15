@@ -18,18 +18,15 @@ print(df.columns)
 # print(target)
 
 # YC4: Với mỗi loại nhà đất, tính trung bình cộng giá cũng như giá lớn nhất và giá nhỏ nhất.
-# print(df[df["type_of_land"]=="Bán nhà mặt phố\n"])
+print(df[df["type_of_land"]=="Bán nhà mặt phố\n"])
 # df["type_of_land"].replace({"Bán nhà mặt phố\n":"Bán nhà mặt phố","Bán nhà riêng\n":"Bán nhà riêng","Bất động sản khác\n":"Bất động sản khác"},inplace=True)
-# print(df["type_of_land"].value_counts())
-# mean_price = df.groupby(by="type_of_land")["price"].mean()
-# max_price = df.groupby(by="type_of_land")["price"].max()
-# min_price = df.groupby(by="type_of_land")["price"].min()
-# # print(mean_price)
-# print("*"*20)
-# table_4 = df.pivot_table(values = "price",index = "type_of_land",aggfunc=["mean","max","min"])
-# print(table_4)
-
+print(df["type_of_land"].value_counts())
+mean_price = df.groupby(by="type_of_land")["price"].mean()
+max_price = df.groupby(by="type_of_land")["price"].max()
+min_price = df.groupby(by="type_of_land")["price"].min()
+table_4 = df.pivot_table(values = "price",index = "type_of_land",aggfunc=["mean","max","min"])
+print(table_4)
 
 # YC5: Tính trung bình cộng số phòng ngủ, số phòng vệ sinh, số tầng của mỗi phường.
-table_5 = df.pivot_table(values=["bedroom","toilet","floor"],index="ward_name",aggfunc={"bedroom":"mean","toilet":"mean","floor":"mean"})
-print(table_5)
+# table_5 = df.pivot_table(values=["bedroom","toilet","floor"],index="ward_name",aggfunc={"bedroom":"mean","toilet":"mean","floor":"mean"})
+# print(table_5)
